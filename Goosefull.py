@@ -72,6 +72,12 @@ def List_is_list_2D(list1, list2):
                 return False
     return True
 
+def list_in_history(list, history):
+    for past in history:
+        if List_is_list_2D(list, past):
+            return True
+    return False
+    
 def leftover_2D(grid, search):
     count = 0
     for row in grid:

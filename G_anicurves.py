@@ -2,7 +2,8 @@ import math
 import ANSI
 import Goosefull as goose
 
-print("Loading module: G_anicurves..")
+filename = __file__.split("\\")[-1] 
+print(f"(Loading module: {filename}..")
 
 # Definieer de tekst en RGB-kleuren
 blue = (0, 0, 255)
@@ -42,7 +43,7 @@ copya = _easings.copy()
 for k,v in copya.items():
     _easings[k.lower()] = v
 
-def a_curve(x, ease="easeInSine", start=0, end=1, strength=1):
+def curve(x, ease="easeInSine", start=0, end=1, strength=1):
     ease = ease.lower()
     x = (x - start) / (end - start)
     x = max(0.0, min(1.0, x))
@@ -50,9 +51,8 @@ def a_curve(x, ease="easeInSine", start=0, end=1, strength=1):
     t = t ** (1 / strength) if t >= 0 else -((-t) ** (1 / strength))
     return start + (end - start) * t
 
-def lerp(progress, start, end, progress_min=0, progress_max=1):
-    t = (progress - progress_min) / (progress_max - progress_min)
-    return start + (end - start) * progress
+def lerp(progress, start, end):
+    return (end - start) * progress
 
 def curve_info():
     goose.print_set(_in, True)
