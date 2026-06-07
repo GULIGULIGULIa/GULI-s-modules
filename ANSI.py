@@ -249,7 +249,7 @@ def alternate(text, colors):
 
 def credit():
     print(
-        f"{UP(1)+CLEAR_LINE()+rgb(C.green)}Loaded Module:{F.END} Guli's {F.BOLD+alternate("ANSI", [C.cyan_light, C.blue_light, C.red_light, C.yellow_light])} decoder."
+        f"{UP(1)+CLEAR_LINE()+rgb(C.green_dark)}Loaded Module:{F.END} Guli's {F.BOLD+alternate("ANSI", [C.cyan_light, C.blue_light, C.red_light, C.yellow_light])} decoder."
         )
 credit()
 

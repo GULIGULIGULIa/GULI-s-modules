@@ -1,7 +1,7 @@
 import time
 import math
 from datetime import datetime
-import ANSI
+from . import ANSI
 import random
 
 print("Loading module: Goosefull..")
@@ -169,6 +169,6 @@ def ease_in_out_spring(x, start, end):
 
 def credit():
     print(
-        f"{ANSI.UP(1)+ANSI.CLEAR_LINE()+ANSI.C.GREEN}Loaded Module:{ANSI.C.END} Guli's {ANSI.C.PURPLE}goose{ANSI.C.BLUE}full{ANSI.C.END} stuff."
+        f"{ANSI.UP(1)+ANSI.CLEAR_LINE()+ANSI.rgb(ANSI.C.green_dark)}Loaded Module:{ANSI.F.END} Guli's {ANSI.rgb(ANSI.C.neon_purple)}goose{ANSI.rgb(ANSI.C.blue)}full{ANSI.F.END} stuff."
         )
 credit()
